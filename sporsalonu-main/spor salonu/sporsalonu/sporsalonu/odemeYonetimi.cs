@@ -12,6 +12,7 @@ namespace sporsalonu
 {
     public partial class odemeYonetimi : Form
     {
+        public 
         public odemeYonetimi()
         {
             InitializeComponent();
@@ -23,6 +24,11 @@ namespace sporsalonu
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void odemeYonetimi_Load(object sender, EventArgs e)
         {
 
         }

@@ -22,7 +22,7 @@ namespace sporsalonu
         void vg() 
         {
             conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM uyeyonetimi",conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT * FROM uyeyonetimi ORDER BY uyeNo DESC",conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -154,7 +154,7 @@ namespace sporsalonu
 
         private void uyeyonetimi_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+           // Application.Exit();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -171,6 +171,11 @@ namespace sporsalonu
         private void btn_Ara_Click(object sender, EventArgs e)
         {
             ua();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
